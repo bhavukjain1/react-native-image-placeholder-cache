@@ -16,12 +16,17 @@ export class CacheEntry {
 
     async getPath(): Promise<?string> {
         const {uri} = this;
+        if(this.path) {
+            return this.path
+        }
         const {path, exists, tmpPath} = await getCacheEntry(uri);
         if (exists) {
+            this.path = path
             return path;
         }
         await FileSystem.downloadAsync(uri, tmpPath);
         await FileSystem.moveAsync({ from: tmpPath, to: path });
+        this.path = path
         return path;
     }
 }
