@@ -1,11 +1,15 @@
 {
   "name": "react-native-image-placeholder-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bhavuk Jain <contact@bhavukjain.com> (https://bhavukjain.com)",
-  "license": "ISC"
+  "license": "ISC",
+  "repository" :{
+  	"type" : "git",
+  	"url" : "https://github.com/bhavukjain1/react-native-image-placeholder-cache.git"
+  }
 }
