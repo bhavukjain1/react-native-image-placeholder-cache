@@ -10,7 +10,7 @@ npm install react-native-image-placeholder-cache --save
 
 ## Usage
 
-```
+```js
 import Image from 'react-native-image-placeholder-cache'
 
 ...
