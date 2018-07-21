@@ -11,6 +11,10 @@ export default class CustomImage extends React.Component {
   }
 
   componentDidMount() {
+    this.updateAllData()
+  }
+
+  updateAllData = () => {
 
     const {source} = this.props
 
@@ -26,6 +30,14 @@ export default class CustomImage extends React.Component {
     .catch(err => {
       console.log(err)
     })
+
+  }
+
+  componentDidUpdate(prevProps) {
+
+    if(prevProps.source != this.props.source) {
+        this.updateAllData()
+    }
   }
 
   getImageComponent = () => {
